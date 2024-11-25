@@ -1,15 +1,34 @@
-Source: template-repository
-Section: unknown
+Source: liblocal-lib-perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: gregor herrmann <gregoa@debian.org>,
+           Salvatore Bonaccorso <carnil@debian.org>
+Section: perl
+Testsuite: autopkgtest-pkg-perl
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Build-Depends: debhelper-compat (= 13),
+               libmodule-build-perl,
+               perl
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/perl-team/modules/packages/liblocal-lib-perl
+Vcs-Git: https://salsa.debian.org/perl-team/modules/packages/liblocal-lib-perl.git
+Homepage: https://metacpan.org/release/local-lib
+Rules-Requires-Root: no
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: liblocal-lib-perl
+Architecture: all
+Depends: ${misc:Depends},
+         ${perl:Depends},
+         libmodule-build-perl
+Description: module to use a local path for Perl modules
+ local::lib is a Perl module that provides a quick, convenient way of setting
+ up a user-local library located within the user's home directory. It also
+ constructs and prints out for the user the list of environment variables
+ using the syntax appropriate for the user's current shell (as specified by
+ the SHELL environment variable), suitable for directly adding to one's shell
+ configuration file.
+ .
+ More generally, this module enables bootstrapping and usage of a directory
+ containing Perl modules outside of Perl's @INC. This makes it easier to ship
+ an application with an app-specific copy of a Perl module, or collection of
+ modules. It is also useful for the case where an upstream maintainer hasn't
+ applied a patch to a module of theirs that you need for your application.

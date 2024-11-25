@@ -1,5 +1,324 @@
-template-repository (1.0-1) unstable; urgency=medium
+liblocal-lib-perl (2.000029-1) unstable; urgency=medium
 
-  * Initial release
+  * Import upstream version 2.000029.
+  * Update years of packaging copyright.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- gregor herrmann <gregoa@debian.org>  Sun, 24 Apr 2022 17:51:10 +0200
+
+liblocal-lib-perl (2.000028-1) unstable; urgency=medium
+
+  [ Salvatore Bonaccorso ]
+  * Update Vcs-* headers for switch to salsa.debian.org
+
+  [ gregor herrmann ]
+  * debian/watch: use uscan version 4.
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Repository.
+  * Remove obsolete fields Contact, Name from debian/upstream/metadata
+    (already present in machine-readable debian/copyright).
+
+  [ gregor herrmann ]
+  * Import upstream version 2.000028.
+  * Update years of packaging copyright.
+  * Declare compliance with Debian Policy 4.6.0.
+  * Set Rules-Requires-Root: no.
+  * Bump debhelper-compat to 13.
+  * Drop unneeded version constraints from (build) dependencies.
+
+ -- gregor herrmann <gregoa@debian.org>  Fri, 22 Oct 2021 00:56:07 +0200
+
+liblocal-lib-perl (2.000024-1) unstable; urgency=medium
+
+  [ Alex Muntada ]
+  * Remove inactive pkg-perl members from Uploaders.
+
+  [ gregor herrmann ]
+  * Import upstream version 2.000024.
+  * Update years of packaging copyright.
+  * Declare compliance with Debian Policy 4.1.3.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 06 Jan 2018 23:56:21 +0100
+
+liblocal-lib-perl (2.000023-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ gregor herrmann ]
+  * debian/upstream/metadata: use HTTPS for GitHub URLs.
+  * Remove Jonathan Yu from Uploaders. Thanks for your work!
+
+  [ Lucas Kanashiro ]
+  * Import upstream version 2.000023
+  * Bump debhelper compatibility level to 10
+  * Declare compliance with Debian Policy 4.0.0
+
+ -- Lucas Kanashiro <kanashiro@debian.org>  Mon, 26 Jun 2017 20:02:10 -0300
+
+liblocal-lib-perl (2.000019-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Salvatore Bonaccorso ]
+  * debian/control: Use HTTPS transport protocol for Vcs-Git URI
+
+  [ gregor herrmann ]
+  * debian/copyright: change Copyright-Format 1.0 URL to HTTPS.
+
+  [ Lucas Kanashiro ]
+  * Import upstream version 2.000019
+  * Declare compliance with Debian policy 3.9.8
+  * debian/control: Update build dependencies
+  * Update Debian packaging copyright
+
+ -- Lucas Kanashiro <kanashiro.duarte@gmail.com>  Mon, 13 Jun 2016 16:36:11 -0300
+
+liblocal-lib-perl (2.000018-1) unstable; urgency=medium
+
+  * Import upstream versions 2.000015, 2.000018.
+  * Update years of packaging copyright.
+  * Mark package as autopkgtest-able.
+  * Declare compliance with Debian Policy 3.9.6.
+  * Drop Suggests: libcapture-tiny-perl.
+    Doesn't seem to be used anywhere.
+  * Update (build) dependencies.
+  * Bump debhelper compatibility level to 9.
+  * debian/rules: remove override_dh_clean.
+    The build artifacts are cleaned by the upstream
+    build system now apparently.
+
+ -- gregor herrmann <gregoa@debian.org>  Sun, 03 Jan 2016 19:44:15 +0100
+
+liblocal-lib-perl (2.000014-1) unstable; urgency=medium
+
+  * Update Vcs-Browser URL to cgit web frontend
+  * Add debian/upstream/metadata
+  * Imported upstream version 2.000014
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Fri, 05 Sep 2014 06:12:48 +0200
+
+liblocal-lib-perl (2.000013-1) unstable; urgency=medium
+
+  * Imported Upstream version 2.000013
+  * Add Build-Depends-Indep on libtest-minimumversion-perl
+  * Add versioned Build-Depends-Indep on libperl-minimumversion-perl.
+    Testsuite requires at least Perl::MinimumVersion 1.35; Add a versioned
+    Build-Depends-Indep on libperl-minimumversion-perl (>= 1.35).
+  * (Build-)Depends on libmodule-build-perl.
+    Remove the alternative dependency for Module::Build, as Module::Build is
+    in Perl core since 5.9.4, but is deprecated and will be CPAN-only and
+    removed from 5.21.0.
+  * Wrap and sort fields in debian/control file
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Sat, 16 Aug 2014 06:13:46 +0200
+
+liblocal-lib-perl (2.000012-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- gregor herrmann <gregoa@debian.org>  Tue, 13 May 2014 20:43:10 +0200
+
+liblocal-lib-perl (2.000011-1) unstable; urgency=medium
+
+  * Imported Upstream version 2.000011
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Wed, 02 Apr 2014 21:49:22 +0200
+
+liblocal-lib-perl (2.000010-1) unstable; urgency=medium
+
+  * Imported Upstream version 2.000010
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Sat, 29 Mar 2014 22:36:26 +0100
+
+liblocal-lib-perl (2.000008-1) unstable; urgency=low
+
+  [ gregor herrmann ]
+  * New upstream releases 1.008026, 2.000003.
+    + Documents PREFIX and INSTALL_BASE conflicts and workaround
+      (Closes: #586795)
+  * debian/rules: make (re)movals --verbose.
+  * Update copyright years and list of copyright holders.
+  * Declare compliance with Debian Policy 3.9.5.
+
+  [ gregor herrmann ]
+  * Strip trailing slash from metacpan URLs.
+
+  [ Salvatore Bonaccorso ]
+  * Imported Upstream version 2.000004, 2.000006, 2.000007 and 2.000008.
+  * Update copyright years for debian/* packaging
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Sat, 08 Mar 2014 15:42:39 +0100
+
+liblocal-lib-perl (1.008023-1) unstable; urgency=low
+
+  * New upstream release.
+  * Update years of packaging copyright.
+
+ -- gregor herrmann <gregoa@debian.org>  Tue, 22 Oct 2013 20:31:16 +0200
+
+liblocal-lib-perl (1.008018-1) unstable; urgency=low
+
+  * Team upload
+  * New upstream release
+  * Install 'eg/*' as examples
+  * d/control: move required libmodule-build-perl from D-B-I to
+    Build-Depends, and update versions per cme suggestion
+
+ -- Nuno Carvalho <smash@cpan.org>  Wed, 18 Sep 2013 12:25:24 +0100
+
+liblocal-lib-perl (1.008011-1) unstable; urgency=low
+
+  * Imported Upstream version 1.008011
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Wed, 07 Aug 2013 21:36:33 +0200
+
+liblocal-lib-perl (1.008010-1) unstable; urgency=low
+
+  * Imported Upstream version 1.008010
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Tue, 28 May 2013 15:57:10 +0200
+
+liblocal-lib-perl (1.008009-1) unstable; urgency=low
+
+  [ Alessandro Ghedini ]
+  * Email change: Alessandro Ghedini -> ghedo@debian.org
+
+  [ gregor herrmann ]
+  * debian/control: update {versioned,alternative} (build) dependencies.
+
+  [ Salvatore Bonaccorso ]
+  * Imported Upstream version 1.008006, 1.008007, 1.008008 and 1.008009
+  * Change Vcs-Git to canonical URI (git://anonscm.debian.org)
+  * Change search.cpan.org based URIs to metacpan.org based URIs
+  * Update debian/copyright file information.
+    Update format to copyright-format 1.0 as released together with Debian
+    policy 3.9.3.
+    Update copyright years for included copy of Module::Install.
+    Update copyright years for debian/* packaging.
+  * Bump Standards-Version to 3.9.4
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Mon, 20 May 2013 19:06:36 +0200
+
+liblocal-lib-perl (1.008004-2) unstable; urgency=low
+
+  [ Ansgar Burchardt ]
+  * debian/control: Convert Vcs-* fields to Git.
+
+  [ Salvatore Bonaccorso ]
+  * debian/copyright: Replace DEP5 Format-Specification URL from
+    svn.debian.org to anonscm.debian.org URL.
+
+  [ gregor herrmann ]
+  * Add perl as an alternative (build) dependency to libmodule-build-perl.
+  * Switch to debhelper compatibility level 8.
+  * Bump Standards-Version to 3.9.2 (no changes).
+  * Update years of packaging copyright.
+  * Move localized manpages into correct directories. Remove now unneeded
+    lintian override.
+
+ -- gregor herrmann <gregoa@debian.org>  Thu, 05 Jan 2012 15:59:55 +0100
+
+liblocal-lib-perl (1.008004-1) unstable; urgency=low
+
+  * New upstream release
+  * Add myself to Uploaders
+
+ -- Alessandro Ghedini <al3xbio@gmail.com>  Sat, 26 Feb 2011 11:13:48 +0100
+
+liblocal-lib-perl (1.008001-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Mon, 10 Jan 2011 15:21:28 +0100
+
+liblocal-lib-perl (1.008000-1) unstable; urgency=low
+
+  * New upstream release
+  * debian/control: Refresh (Build-)Depends(-Indep) and Uploaders
+    fields.
+  * debian/copyright: Refresh copyright years for debian/* packaging
+    stanza.
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Fri, 07 Jan 2011 09:09:36 +0100
+
+liblocal-lib-perl (1.007000-1) unstable; urgency=low
+
+  * New upstream release
+  * Update my email address.
+  * debian/copyright: Refer to Debian systems instead of Debian
+    GNU/Linux systems.
+  * Add libmodule-build-perl (>= 0.36) to (Build-)Depends(-Indep).
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Fri, 10 Dec 2010 16:11:27 +0100
+
+liblocal-lib-perl (1.006007-1) unstable; urgency=low
+
+  * New upstream release
+  * Bump Standards-Version to 3.9.1.
+  * debian/control: Make versioned (Build-)Depends(-Indep) on perl
+    unversioned.
+  * debian/copyright:
+    - Update upstream copyright stanza.
+    - Explicitly reference GPL-1 license text in common-licenses.
+  * debian/rules: Do not install portuguese translation of lib.pod in
+    /usr/share/perl5/POD2/PT_BR.
+  * Add lintian override for false-positive spelling error due to report
+    of translated manpage.
+
+ -- Salvatore Bonaccorso <salvatore.bonaccorso@gmail.com>  Sat, 14 Aug 2010 11:37:53 +0200
+
+liblocal-lib-perl (1.006005-1) unstable; urgency=low
+
+  * New upstream release
+  * Bump Standards-Version to 3.9.0 (no changes needed).
+
+ -- Salvatore Bonaccorso <salvatore.bonaccorso@gmail.com>  Wed, 14 Jul 2010 07:31:43 +0200
+
+liblocal-lib-perl (1.006004-1) unstable; urgency=low
+
+  * New upstream release
+  * debian/copyright: update to revision 135 of DEP5 format-
+    specification for machine readable copyright file. Update upstreams
+    copyright years to -2007-2010, as german translation included.
+  * Add myself to Uploaders.
+  * debian/rules: Remove installed lib.pod in
+    /usr/share/perl5/POD2/DE/local.
+
+ -- Salvatore Bonaccorso <salvatore.bonaccorso@gmail.com>  Sat, 12 Jun 2010 10:02:18 +0200
+
+liblocal-lib-perl (1.006000-1) unstable; urgency=low
+
+  * New upstream release.
+  * Convert to source format 3.0 (quilt).
+  * Add /me to Uploaders.
+  * Bump debhelper dependency to 7.2.13 (Module::AutoInstall).
+
+ -- gregor herrmann <gregoa@debian.org>  Thu, 01 Apr 2010 21:59:32 +0200
+
+liblocal-lib-perl (1.005001-1) unstable; urgency=low
+
+  [ Jonathan Yu ]
+  * New upstream release
+  * Standards-Version 3.8.4 (no changes)
+  * Use new DEP5 copyright format
+
+  [ gregor herrmann ]
+  * (Build) depend on perl >= 5.10 to make sure we have CPAN 1.82.
+
+ -- Jonathan Yu <jawnsy@cpan.org>  Thu, 11 Mar 2010 11:32:27 -0500
+
+liblocal-lib-perl (1.004009-1) unstable; urgency=low
+
+  [ Jonathan Yu ]
+  * New upstream release
+
+  [ gregor herrmann ]
+  * debian/rules: remove generated stuff in clean target.
+
+ -- Jonathan Yu <jawnsy@cpan.org>  Thu, 19 Nov 2009 07:54:58 -0500
+
+liblocal-lib-perl (1.004008-1) unstable; urgency=low
+
+  * Initial Release. (Closes: #533470)
+
+ -- Jonathan Yu <jawnsy@cpan.org>  Mon, 26 Oct 2009 16:30:21 -0400

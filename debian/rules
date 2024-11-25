@@ -1,4 +1,20 @@
 #!/usr/bin/make -f
 
+PACKAGE = $(shell dh_listpackages)
+TMP     = $(CURDIR)/debian/$(PACKAGE)
+
 %:
 	dh $@
+
+override_dh_auto_install:
+	dh_auto_install
+	# Remove installed /usr/share/perl5/POD2/DE/local/lib.pod
+	rm -v $(TMP)/usr/share/perl5/POD2/DE/local/lib.pod
+	rmdir --ignore-fail-on-non-empty --parents --verbose $(TMP)/usr/share/perl5/POD2/DE/local
+	# Remove installed /usr/share/perl5/POD2/PT_BR/local/lib.pod
+	rm -v $(TMP)/usr/share/perl5/POD2/PT_BR/local/lib.pod
+	rmdir --ignore-fail-on-non-empty --parents --verbose $(TMP)/usr/share/perl5/POD2/PT_BR/local
+	# install localized manpages into useful places
+	dh_installdirs usr/share/man/de/man3/ usr/share/man/pt_BR/man3/
+	mv -v $(TMP)/usr/share/man/man3/POD2::DE::local::lib.3pm $(TMP)/usr/share/man/de/man3/local::lib.3pm
+	mv -v $(TMP)/usr/share/man/man3/POD2::PT_BR::local::lib.3pm $(TMP)/usr/share/man/pt_BR/man3/local::lib.3pm
